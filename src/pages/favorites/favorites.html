@@ -1,10 +1,14 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>Favorites</ion-title>
+    <ion-title>Favorite quotes</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  Favorites
+  <ion-item *ngFor="let quote of quotes"
+            (click)="onViewQuote(quote)">
+   <h2>{{ quote.person}}</h2>
+    <p>{{ quote.text}}</p>
+  </ion-item>
 </ion-content>
