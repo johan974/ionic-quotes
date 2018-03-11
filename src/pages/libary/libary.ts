@@ -10,13 +10,11 @@ import {QuotesPage} from "../quotes/quotes";
   templateUrl: 'libary.html',
 })
 export class LibaryPage implements  OnInit{
-  quoteCollection: { category:string, quote:Quote[], icon:string}[] = [];
+  quoteCollection: { category:string, quotes:Quote[], icon:string}[] = [];
   quotesPage = QuotesPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
   ngOnInit() {
     this.quoteCollection = quotes;
   }
-
 }
